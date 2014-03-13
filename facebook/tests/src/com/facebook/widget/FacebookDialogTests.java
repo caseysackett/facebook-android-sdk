@@ -16,11 +16,8 @@
 
 package com.facebook.widget;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.Bundle;
 import com.facebook.FacebookTestCase;
-import com.facebook.internal.NativeProtocol;
 import com.facebook.model.GraphObject;
 import com.facebook.model.OpenGraphAction;
 import com.facebook.model.OpenGraphObject;
@@ -228,6 +225,7 @@ public class FacebookDialogTests extends FacebookTestCase {
         }
     }
 
+    @SuppressWarnings("deprecation")
     public void testOpenGraphDialogBuilderDeprecatedConstructorRequiresActionType() {
         try {
             OpenGraphAction action = OpenGraphAction.Factory.createForPost();
@@ -243,6 +241,7 @@ public class FacebookDialogTests extends FacebookTestCase {
 
     }
 
+    @SuppressWarnings("deprecation")
     public void testOpenGraphDialogBuilderDeprecatedConstructorRequiresActionTypeMatches() {
         try {
             OpenGraphAction action = OpenGraphAction.Factory.createForPost("foo");
